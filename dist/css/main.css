@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Dosis', sans-serif; }
+
+body {
+  line-height: 1.6;
+  background: #fff; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+ul {
+  list-style: none; }
+
+h2, h3, h4 {
+  text-transform: uppercase; }
+
+img {
+  width: 100%; }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem; }
+
+.main-color {
+  color: #ffbc00; }
+
+.current {
+  border-bottom: 3px solid #ffbc00; }
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+.btn {
+  padding: 1rem 2rem;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s; }
+  .btn:hover {
+    background: #ffbc00;
+    color: #fff; }
+
+.btn-light {
+  color: #333;
+  background-color: #fff; }
+
+.btn-dark {
+  color: #fff;
+  background-color: #000; }
+
+.bg-main {
+  background: #ffbc00;
+  color: #fff; }
+
+.bg-dark {
+  background: #333;
+  color: #fff; }
+
+.bg-light {
+  background: #fff;
+  color: #000; }
+
+.bg-medium {
+  background: #ccc;
+  color: #000; }
+
+#header-home {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  z-index: 2; }
+  #header-home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/showcase2.jpg") no-repeat center center/cover;
+    opacity: 0.5;
+    z-index: -1; }
+  #header-home .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #header-home .main-nav h1 {
+      font-size: 1.8em; }
+    #header-home .main-nav .nav-list {
+      display: flex; }
+      #header-home .main-nav .nav-list a {
+        color: #fff;
+        margin: 0 1.5rem;
+        padding-bottom: 0.5rem;
+        transition: border-bottom 0.3s;
+        font-size: 1.2rem; }
+        #header-home .main-nav .nav-list a:hover {
+          border-bottom: 3px solid #fff; }
+  #header-home .showcase {
+    text-align: center;
+    padding-top: 20%;
+    padding-bottom: 2rem; }
+    #header-home .showcase h1 {
+      font-size: 3.5rem; }
+    #header-home .showcase p {
+      margin: 0 auto; }
+
+main .brief-intro {
+  text-align: center; }
+  main .brief-intro h2 {
+    position: relative;
+    font-size: 2.5rem; }
+    main .brief-intro h2::before {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translate(-50%);
+      width: 100px;
+      height: 3px;
+      background: #ffbc00; }
+
+main .skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  main .skills .card {
+    height: 100px;
+    margin: 2rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    main .skills .card img {
+      width: 47px; }
+    main .skills .card i {
+      font-size: 3rem;
+      margin-bottom: 0.5rem; }
+    main .skills .card .fa-html5 {
+      color: #FE490B; }
+    main .skills .card .fa-css3 {
+      color: #0373B8; }
+    main .skills .card .fa-js {
+      color: #FBDE24; }
+    main .skills .card .fa-php {
+      color: #627BBF; }
+    main .skills .card .fa-sass {
+      color: #C7568B; }
+    main .skills .card .fa-react {
+      color: #5EDCF7; }
+
+main .statistics {
+  display: grid;
+  padding-top: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center; }
+  main .statistics div {
+    padding: 4rem;
+    background: #F4F4F4; }
+    main .statistics div:nth-child(even) {
+      background: #CCCCCC; }
+    main .statistics div i {
+      font-size: 3rem; }
+    main .statistics div h3 {
+      font-size: 1.5rem;
+      padding: 1rem 0; }
+    main .statistics div p {
+      font-size: 2rem;
+      font-weight: bold; }
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 2rem 0; }
+  footer .main-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center; }
+    footer .main-footer p {
+      padding: 1rem;
+      font-size: 1.3rem; }
+    footer .main-footer div {
+      display: flex;
+      justify-content: flex-end; }
+      footer .main-footer div a {
+        color: #fff; }
+        footer .main-footer div a i {
+          padding: 1rem;
+          font-size: 1.3rem;
+          border: 3px solid #fff;
+          border-radius: 50%;
+          margin: 0 10px;
+          cursor: pointer; }
+          footer .main-footer div a i:hover {
+            background: #ffbc00; }

@@ -1,0 +1,35 @@
+
+footer{
+	background: $dark-color;
+	color: set-text-color($dark-color);
+	padding: 2rem 0;
+	.main-footer {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		p{
+			padding: 1rem;
+			font-size: 1.3rem;
+		}
+		div{
+			display: flex;
+			justify-content: flex-end;
+			a{
+				color: set-text-color($dark-color);
+				i{
+					padding: 1rem;
+					font-size: 1.3rem;
+					border: 3px solid #fff;
+					border-radius: 50%;
+					margin: 0 10px;
+					cursor: pointer;
+					&:hover{
+						background: $main-color;
+					}
+				}
+			}
+			
+
+		}
+	}
+}

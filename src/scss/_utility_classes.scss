@@ -1,0 +1,75 @@
+// Utility classes
+
+.container {
+	max-width: $website-width;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.main-color {
+	color: $main-color;
+}
+.current {
+	border-bottom: 3px solid $main-color;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+
+.btn {
+	padding: 1rem 2rem;
+	display: inline-block;
+	transition: background 0.2s, color 0.2s;
+	&:hover{
+		background: $main-color;
+		color: set-text-color($main-color);
+	}
+}
+.btn-light {
+  color: $dark-color;
+  background-color: set-text-color($dark-color); }
+
+.btn-dark {
+  color: $light-color;
+  background-color: set-text-color($light-color); }
+.bg-main {
+  background: $main-color;
+  color: set-text-color($main-color); }
+
+.bg-dark {
+  background: $dark-color;
+  color: set-text-color($dark-color); }
+
+.bg-light {
+  background: $light-color;
+  color: set-text-color($light-color); }
+
+.bg-medium {
+  background: $medium-color;
+  color: set-text-color($medium-color); }
