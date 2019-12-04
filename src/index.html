@@ -42,7 +42,8 @@
       <section class="showcase">
            
                <h1 class="lead">
-                 I Am Aiur The
+
+                 <span id="showcase-text">I Am Aiur The</span>
                  <span class="txt-type" data-wait="3000"  data-words='["Back-End Dev", "Front-End Dev", "Web Dev"]'></span>
                 </h1>
                 
@@ -51,6 +52,7 @@
       </section>
 
       <div class="contact-form">
+        <p id="close">Close</p>
         <h2 class="lead underline">Contact Me</h2>
         <p class="lead">Here is how you can reach me</p>
         <form method="POST" data-netlify="true" data-netlify-recaptcha="true">
@@ -59,7 +61,7 @@
               <input type="text" class="text-input subject-input" placeholder="Subject" name="subject"/>
               <input type="email" class="text-input email-input" placeholder="Email Address" name="email"/>
               <input type="text" class="text-input phone-input" placeholder="Phone Number" name="phone" /> <textarea class="text-input message-input" placeholder="Enter Message" name="message"></textarea>
-              <div class="my-2">
+              <div >
                 <div data-netlify-recaptcha="true"></div>
               </div>
           </div>

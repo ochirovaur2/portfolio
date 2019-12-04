@@ -50,6 +50,7 @@ main{
 			grid-template-columns: repeat(3, 1fr);
 			box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 			grid-gap: 0.5rem;
+
 			.card{
 				position: relative;
 			  	overflow: hidden;
@@ -113,6 +114,7 @@ main{
 			
 		}
 	}
+
 	.statistics{
 		display: grid;
 		padding-top: 3rem;
@@ -139,4 +141,28 @@ main{
 			};
 		}
 	}
+
+	@media screen and (max-width: 900px){
+	
+		.my-work{
+			.cards{
+				grid-template-columns: repeat(2, auto);
+			}			
+		}	
+		
+	}
+	@media screen and (max-width: 600px){
+	
+		.my-work{
+			.cards{
+				grid-template-columns: repeat(1, auto);
+			}			
+		}	
+		.statistics{
+			display: grid;
+			grid-template-columns: repeat(1, auto);
+		}
+	}
 }
+
+

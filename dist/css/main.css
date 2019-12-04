@@ -171,6 +171,11 @@ img {
     transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
     text-align: center;
     transition: transform 1s cubic-bezier(0.2, 1, 0.2, 1); }
+    #header-home .contact-form #close {
+      position: absolute;
+      visibility: hidden;
+      top: 30px;
+      right: 40px; }
     #header-home .contact-form h2 {
       padding-top: 10%; }
     #header-home .contact-form .text-fields {
@@ -184,6 +189,32 @@ img {
       #header-home .contact-form .text-fields textarea {
         grid-column: 1 / span 2;
         resize: none; }
+  @media screen and (max-width: 600px) {
+    #header-home .main-nav {
+      flex-direction: column; }
+      #header-home .main-nav h1 {
+        font-size: 1.5rem; }
+      #header-home .main-nav .nav-list {
+        padding-top: 1rem; }
+    #header-home .contact-form {
+      z-index: 4; }
+      #header-home .contact-form #close {
+        cursor: pointer;
+        visibility: visible;
+        z-index: 5; }
+      #header-home .contact-form .text-fields {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr); }
+        #header-home .contact-form .text-fields textarea {
+          grid-column: auto;
+          grid-row: 5 / span 2; }
+      #header-home .contact-form button {
+        margin-top: 0; }
+    #header-home .showcase h1 {
+      padding-top: 2rem;
+      font-size: 1.5rem; }
+    #header-home .showcase .btn {
+      padding: 0.5rem 1rem; } }
 
 main .brief-intro {
   text-align: center; }
@@ -286,6 +317,17 @@ main .statistics {
       font-size: 2rem;
       font-weight: bold; }
 
+@media screen and (max-width: 900px) {
+  main .my-work .cards {
+    grid-template-columns: repeat(2, auto); } }
+
+@media screen and (max-width: 600px) {
+  main .my-work .cards {
+    grid-template-columns: repeat(1, auto); }
+  main .statistics {
+    display: grid;
+    grid-template-columns: repeat(1, auto); } }
+
 footer {
   background: #333;
   color: #fff;
@@ -311,3 +353,17 @@ footer {
           cursor: pointer; }
           footer .main-footer div a i:hover {
             background: #ffbc00; }
+  @media screen and (max-width: 600px) {
+    footer .main-footer {
+      grid-template-columns: 1fr; }
+      footer .main-footer p {
+        text-align: center; }
+      footer .main-footer div {
+        padding: 0.8rem;
+        justify-content: center; } }
+
+@media screen and (max-width: 600px) {
+  .main-nav {
+    flex-direction: column; }
+    .main-nav .nav-list {
+      padding-top: 1rem; } }

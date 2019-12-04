@@ -74,7 +74,8 @@ base = {
   home: document.querySelector("#home"),
   contact: document.querySelector("#contact"),
   showcase: document.querySelector(".showcase"),
-  contactForm: document.querySelector(".contact-form")
+  contactForm: document.querySelector(".contact-form"),
+  close: document.querySelector("#close")
 }
 
 showAndHideContactForm = (center, outFromView, percentCenter, percentOut) => {
@@ -88,14 +89,18 @@ toggleUnderline = (add, remove) => {
   add.classList.add("current");
   remove.classList.remove("current");
 }
+const closeContactForm = [base.close, base.home];
 
-base.home.onclick = ()=> {
+for(let i = 0; i < closeContactForm.length; i++) {
+  closeContactForm[i].onclick = ()=> {
 
-  
-  toggleUnderline(base.home, base.contact);
-  
-  base.contactForm.style.transform = "scale(2) translateX(-75%) translateY(-75%) rotate(-28deg)";
+    
+    toggleUnderline(base.home, base.contact);
+    
+    base.contactForm.style.transform = "scale(2) translateX(-75%) translateY(-75%) rotate(-28deg)";
+  }
 }
+
 
 base.contact.onclick = ()=> {
   
@@ -122,3 +127,4 @@ $('#viewWorkBtn').on('click', function(e){
             );
           }
         });
+
