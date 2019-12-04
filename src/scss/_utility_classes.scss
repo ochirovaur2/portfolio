@@ -46,6 +46,7 @@
 	padding: 1rem 2rem;
 	display: inline-block;
 	transition: background 0.2s, color 0.2s;
+	border: none;
 	&:hover{
 		background: $main-color;
 		color: set-text-color($main-color);
@@ -73,3 +74,23 @@
 .bg-medium {
   background: $medium-color;
   color: set-text-color($medium-color); }
+
+.underline{
+	position: relative;
+	padding-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
+	font-size: 2.5rem;
+			&::before{
+		content: "";
+		position: absolute;
+		bottom: 0rem;
+		left: 50%;
+		transform: translate(-50%);
+		width: 100px;
+		height: 3px;
+		background: $main-color;
+	}
+}
+.center{
+	text-align: center;
+}
