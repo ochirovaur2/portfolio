@@ -10,18 +10,21 @@ main{
 		.card{
 			height: 100px;
 			margin: 2rem;
-			display: grid;
+			width: 47px;
 			align-items: center;
-			justify-content: center;
 			text-align: center;
+			display:flex;
+			flex-direction: column;
+			justify-content: space-between;
 			img{
 				
-				width: 47px;
+				width: 100%;
 			}
 			i{
-				font-size: 3rem;
+				font-size: 47px;
 				margin-bottom: 0.5rem;
 			}
+
 			// colors
 			.fa-html5{
 				color: $html-color;
@@ -54,7 +57,7 @@ main{
 			.card{
 				position: relative;
 			  	overflow: hidden;
-
+				 
 			  	&-text{
 			  		position: absolute;
 			  		top: -20%;

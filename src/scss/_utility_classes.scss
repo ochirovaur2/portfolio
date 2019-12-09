@@ -4,6 +4,7 @@
 	max-width: $website-width;
 	margin: 0 auto;
 	padding: 0 1.5rem;
+	overflow: hidden;
 }
 
 .main-color {
@@ -43,7 +44,7 @@
 
 
 .btn {
-	padding: 1rem 2rem;
+	padding: 0.8rem 2rem;
 	display: inline-block;
 	transition: background 0.2s, color 0.2s;
 	border: none;

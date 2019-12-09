@@ -1,158 +1,87 @@
-#header-home{
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-	background: black;
-	color: $light-color;
-	padding: 1.5rem 2rem;
-	z-index: 2;
-	overflow: hidden;
-	&::before{
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: $bg-image no-repeat center center/cover;
-		opacity: 0.5;
-		z-index: -1;
-	}
-	.main-nav{
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		z-index: 3;
-		#nav-logo{
-			z-index: 3;
-		}
-		h1{
-			font-size: 1.8em;
-		}
-
-		.nav-list {
-			z-index: 3;
-			display: flex;
-			li > span{
-				color: $light-color;
-				margin: 0 1.5rem;
-				padding-bottom: 0.5rem;
-				transition: border-bottom 0.3s;
-				font-size: 1.2rem;
-				cursor: pointer;
-				&:hover{
-					border-bottom: 3px solid $light-color;
-				}
-
-			}
-
-		}
-	}
-
-	.showcase{
-		
-		text-align: center;
-		padding-top: 10%;
-		padding-bottom: 2rem;
-		transition: 0.7s;
-		
-		h1{
-			font-size: 3.5rem;
-			
-		}
-		p{
-			margin: 0 auto;
-		}
-	}
-	.contact-form {
-		overflow: hidden;
-	    position: absolute;
-	    width: 100%;
-	    height: 100%;
-	    background: $dark-color;
-	    top: 0;
-		left: 0;
-		
-	    transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
-	    
-	    text-align: center;
-	    transition: transform 1s cubic-bezier(0.2, 1, 0.2, 1);
-	    #close {
-	    	position: absolute;
-	    	visibility: hidden;
-	    	top: 30px;
-	    	right: 40px;
-	    }
-		h2{
-			padding-top: 10%;
-		}
-	    .text-fields{
-			
-	    	display: grid;
-			
-	    	grid-template-columns: 1fr 1fr;
-	    	grid-gap: 1rem;
-	    	grid-template-rows: 1fr 1fr 3fr;
-
-	    	input,
-	    	textarea{
-	    		padding: 0.5rem 1rem;
-	    	}
-	    	textarea{
-	    		grid-column: 1 / span 2;
-	    		
-	    		resize: none;
-	    	}
-	    }
-	    
-	}
-	@media screen and (max-width: 600px){
-		.main-nav{
-			flex-direction: column;
-			
-			h1{
-				font-size: 1.5rem;
-			}
-			.nav-list{
-				padding-top: 1rem;
-			}
-		}
-		.contact-form{
-			z-index: 4;
-			#close {
-		    	cursor: pointer;
-		    	visibility: visible;
-		    	z-index: 5;
-		    }
-			.text-fields{
-		    	grid-template-columns: 1fr;
-		    	grid-template-rows: repeat(6, 1fr);
-
-		    	textarea{
-		    		grid-column: auto;
-		    		grid-row: 5 / span 2;
-		    	}
-		    }
-		    button{
-		    	margin-top: 0;
-		    }
-
-		}
-		.showcase{
-			h1{
-				padding-top: 2rem;
-				font-size: 1.5rem;
-
-				
-			}
-			.btn{
-					padding: 0.5rem 1rem;
-			}
-		}
-		
-
-	}
-		
+header {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: url('../img/showcase2.jpg') no-repeat center center/cover;
+  z-index: 1;
+  color: $light-color;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.4;
+    z-index: -1;
+  }
+   nav {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      font-size: 1.9rem;
+    }
+    ul {
+      display: flex;
+    }
+    li {
+      margin: 0 1.5rem;
+      font-size: 1.5rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        border-bottom: 3px solid $light-color;
+      }
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
 
 
+//header-content 
+
+
+.header-content{
+  text-align: center;
+  padding-top: 20%;
+  h1 {
+    font-size: 4rem;
+    
+  }
+}
+// Smartphones
+@media (max-width: 500px) {
+  header nav{
+    flex-direction: column;
+  }
+  .header-content h1 {
+    font-size: 1.8rem;
+
+  }
+}
+
+// Landscape (Iphone 10)
+@media (max-height: 580px) {
+  .header-content {
+      padding-top: 3rem;
+    h1{
+      font-size: 2rem;
+    }
+     
+  } 
+}
+
+
+// Iphone 5 
+@media (max-width: 321px) {
+  .header-content {
+      padding-top: 3rem;
+      h1{
+        font-size: 1.5rem;
+      }
+  }
 }
